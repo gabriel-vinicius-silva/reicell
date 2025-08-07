@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rei Cell - Assistência Técnica</title>
+  <meta name="description" content="Rei Cell: Assistência técnica de celulares em Cidade Nova - Natal/RN. Troca de tela, bateria, desbloqueio, acessórios e mais!" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-  <a href="https://wa.me/558496191817" class="whatsapp-button" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/558496191817" class="whatsapp-button" target="_blank" title="Fale conosco pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <header>
     <h1>Rei Cell</h1>
@@ -19,6 +23,7 @@
   <nav>
     <a href="#inicio">Início</a>
     <a href="#servicos">Serviços</a>
+    <a href="#divulgacao">Painel</a>
     <a href="#sobre">Sobre Nós</a>
     <a href="#localizacao">Localização</a>
     <a href="#contato">Contato</a>
@@ -26,7 +31,7 @@
 
   <section id="inicio">
     <div class="highlight">
-      <img src="faixada01.png" alt="Fachada da loja Rei Cell" />
+      <img src="img/fotosdia/faichada02.jpg" alt="Fachada da loja Rei Cell, assistência técnica de celulares" />
     </div>
   </section>
 
@@ -38,14 +43,29 @@
       <div class="service"><i class="fas fa-microchip"></i><h3>Conserto de Placa</h3><p>Reparo de placas com equipamentos profissionais.</p></div>
       <div class="service"><i class="fas fa-unlock"></i><h3>Desbloqueio</h3><p>Desbloqueio de aparelhos com segurança.</p></div>
       <div class="service"><i class="fas fa-sync-alt"></i><h3>Atualização de Software</h3><p>Deixe seu sistema atualizado.</p></div>
-      <div class="service"><i class="fas fa-headphones"></i><h3>Venda de Acessórios</h3><p>Capinhas, películas, carregadores e mais.</p></div>
+      <div class="service"><i class="fas fa-headphones"></i><h3>Acessórios</h3><p>Capinhas, películas, carregadores e mais.</p></div>
     </div>
+
     <h3>Galeria de Produtos</h3>
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="capas.jpg" alt="Capinhas para celular"></div>
-      <div class="gallery-item"><img src="diversos.jpg" alt="Diversos produtos"></div>
+      <div class="gallery-item"><img src="img/fotosdia/capas.jpg" alt="Capinhas para celular" title="Capinhas para celular"></div>
+      <div class="gallery-item"><img src="img/fotosdia/diversos.jpg" alt="Acessórios diversos" title="Acessórios diversos"></div>
     </div>
-  </section>      
+  </section>
+
+  <section id="divulgacao">
+    <h2>Painel de Divulgação</h2>
+    <div class="divulgacao-grid">
+      <div class="divulgacao-item">
+        <img src="img/promocoes/desconto-bateria.jpg" alt="Promoção de troca de bateria" title="Desconto especial em troca de bateria">
+        <p><strong>Troca de bateria com 20% OFF essa semana!</strong></p>
+      </div>
+      <div class="divulgacao-item">
+        <img src="img/promocoes/acessorios-novos.jpg" alt="Novos acessórios em estoque" title="Novos acessórios disponíveis">
+        <p>Chegaram novos modelos de capinhas e películas. Venha conferir!</p>
+      </div>
+    </div>
+  </section>
 
   <section id="sobre">
     <h2>Sobre Nós</h2>
@@ -56,7 +76,7 @@
         <p><strong>Visão:</strong> Ser referência em conserto de celulares e eletrônicos na região.</p>
         <p><strong>Valores:</strong> Qualidade, compromisso, agilidade e transparência.</p>
       </div>
-      <img src="servico.jpg" alt="Técnico da Rei Cell em serviço" />
+      <img src="servico.jpg" alt="Técnico consertando celular" />
     </div>
   </section>
 
@@ -67,12 +87,7 @@
     <p>Telefone: +55 84 9619-1817 | WhatsApp: +55 84 9619-1817</p>
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.9122950906123!2d-35.28050812573658!3d-5.823059994134468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b255dff5a6d4d7%3A0x7e6e3d50c6e05780!2sAv.%20Solange%20Nunes%20do%20Nascimento%2C%20553%20-%20Cidade%20Nova%2C%20Natal%20-%20RN%2C%2059215-330!5e0!3m2!1spt-BR!2sbr!4v1716843040486!5m2!1spt-BR!2sbr" 
-      width="100%" 
-      height="300" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </section>
 
@@ -81,8 +96,8 @@
     <form id="whatsapp-form" onsubmit="sendToWhatsApp(event)">
       <input type="text" name="nome" placeholder="Nome" required />
       <input type="tel" name="celular" placeholder="Celular" required />
-      <select name="servico">
-        <option>Tipo de serviço</option>
+      <select name="servico" required>
+        <option disabled selected>Tipo de serviço</option>
         <option>Troca de Tela</option>
         <option>Troca de Bateria</option>
         <option>Desbloqueio</option>
@@ -94,10 +109,8 @@
       <button type="submit">Enviar</button>
     </form>
     <p>Siga-nos: 
-      <a href="https://www.instagram.com/reicellplanalto/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/reicellplanalto/" title="Instagram da Rei Cell"><i class="fab fa-instagram"></i></a>
     </p>
-    <!--<p><a href="https://g.page/r/CODIGO-AVALIACAO" target="_blank">Avalie-nos no Google</a></p>-->
-
   </section>
 
   <footer>
@@ -107,18 +120,20 @@
   <script>
     function sendToWhatsApp(event) {
       event.preventDefault();
-      
       const form = document.getElementById('whatsapp-form');
       const nome = form.nome.value.trim();
       const celular = form.celular.value.trim();
       const servico = form.servico.value.trim();
       const mensagem = form.mensagem.value.trim();
 
-      const numeroWhatsApp = "558496191817"; // Substitua pelo seu número com DDI (55) e DDD
+      if (servico === "Tipo de serviço") {
+        alert("Por favor, selecione um tipo de serviço.");
+        return;
+      }
 
+      const numeroWhatsApp = "558496191817";
       const texto = `Olá, sou ${nome}%0AMeu número: ${celular}%0AServiço desejado: ${servico}%0AMensagem: ${mensagem}`;
       const url = `https://wa.me/${numeroWhatsApp}?text=${texto}`;
-
       window.open(url, '_blank');
     }
   </script>
